@@ -1,0 +1,199 @@
+.on {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.speed2 {
+  animation-duration: 2s;
+}
+
+.speed3 {
+  animation-duration: 3s;
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359.9deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359.9deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359.9deg);
+  }
+}
+
+.spin {
+  animation-name: spin;
+}
+
+body {
+  background: rgb(53, 53, 53);
+}
+div {
+  text-align: center;
+}
+svg {
+  height: 95vh;
+}
+
+g#Layer_1 line,
+g#Layer_1 ellipse,
+g#Layer_1 path,
+g#Layer_1 circle {
+  stroke: #676767;
+}
+
+g#Interior_Floorplan line,
+g#Interior_Floorplan ellipse,
+g#Interior_Floorplan path,
+g#Interior_Floorplan circle {
+  stroke: #676767;
+}
+
+g#Windows line {
+  stroke: #284b8b;
+}
+
+g#BedroomFan * {
+  stroke: #aaa;
+}
+
+g#GreatRoomFan * {
+  stroke: #aaa;
+}
+
+g#GreatRoomFan {
+  transform-origin: 50% 50%;
+  filter: url(#fanshadow);
+}
+
+g#BedroomFan {
+  transform-origin: 50% 50%;
+  filter: url(#fanshadow);
+}
+
+g#Lights {
+  fill: #ffffff;
+  filter: url(#dropshadow);
+}
+
+g#Doors * {
+  stroke: #aaa;
+}
+
+#FrontDoor {
+  stroke: #8b1c1c !important;
+  stroke-width: 2px;
+  filter: url(#redalert);
+}
+
+#FrontDoor.closed {
+  transform-origin: 100% 100%;
+  transform: rotate(-45deg);
+  stroke: #0f8f44 !important;
+  filter: none;
+}
+
+#BackDoor {
+  stroke: #8b1c1c !important;
+  stroke-width: 2px;
+  filter: url(#redalert);
+}
+
+#BackDoor.closed {
+  transform-origin: 0% 0%;
+  transform: rotate(-48deg);
+  stroke: #0f8f44 !important;
+}
+
+#MasterDoor.closed {
+  transform-origin: 100% 100%;
+  transform: rotate(-45deg);
+}
+
+#UpstairsBathroomDoor.closed {
+  transform-origin: 0% 100%;
+  transform: rotate(-45deg);
+}
+
+#MasterBathroomDoor.closed {
+  transform-origin: 0% 0%;
+  transform: rotate(45deg);
+}
+
+#SouthBedroomDoor.closed {
+  transform-origin: 0% 0%;
+  transform: rotate(45deg);
+}
+
+#NorthBedroomDoor.closed {
+  transform-origin: 0% 0%;
+  transform: rotate(-45deg);
+}
+
+#GarageAccessDoor {
+  stroke: #8b1c1c !important;
+  filter: url(#redalert);
+  stroke-width: 2px;
+}
+
+#GarageAccessDoor.closed {
+  transform-origin: 0% 100%;
+  transform: rotate(-45deg);
+  stroke: #0f8f44 !important;
+}
+
+#LaundryDoor.closed {
+  transform-origin: 0% 0%;
+  transform: rotate(-47deg);
+}
+
+#PantryDoor.closed {
+  transform-origin: 100% 100%;
+  transform: rotate(-31deg);
+}
+
+#GarageDoor.open {
+  stroke-dasharray: 3px;
+  stroke: #8b1c1c !important;
+  stroke-width: 2px;
+  filter: url(#redalert);
+}
+
+#GarageDoor {
+  stroke: #0f8f44 !important;
+  stroke-width: 2px;
+}
+
+#FrontDoor.unlocked.closed {
+  stroke: #8b1c1c !important;
+  stroke-width: 2px;
+  filter: none;
+}
+
+#FrontDoor.unlocked.closed::after {
+  content: 'U';
+}
+
+g#Windows > line.open {
+  stroke-dasharray: 3px;
+  stroke: #8b1c1c !important;
+  stroke-width: 2px;
+  /*filter: url(#redalert);*/
+}

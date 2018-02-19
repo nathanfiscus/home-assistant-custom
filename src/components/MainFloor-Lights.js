@@ -18,7 +18,9 @@ const styles = () => ({
 
 @withStyles(styles)
 class MainFloorLights extends React.PureComponent {
-  static propTypes = {};
+  static propTypes = {
+    classes: PropTypes.object
+  };
 
   static defaultProps = {};
 
@@ -30,11 +32,11 @@ class MainFloorLights extends React.PureComponent {
 
   componentDidMount() {}
 
-  componentWillReceiveProps(nextProps) {}
+  componentWillReceiveProps() {}
 
-  componentWillUpdate(nextProps, nextState) {}
+  componentWillUpdate() {}
 
-  componentDidUpdate(prevProps, prevState) {}
+  componentDidUpdate() {}
 
   componentWillUnmount() {}
 

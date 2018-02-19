@@ -109,7 +109,9 @@ const styles = () => ({
 
 @withStyles(styles)
 class MainFloorDoors extends React.PureComponent {
-  static propTypes = {};
+  static propTypes = {
+    classes: PropTypes.object
+  };
 
   static defaultProps = {};
 
@@ -121,11 +123,11 @@ class MainFloorDoors extends React.PureComponent {
 
   componentDidMount() {}
 
-  componentWillReceiveProps(nextProps) {}
+  componentWillReceiveProps() {}
 
-  componentWillUpdate(nextProps, nextState) {}
+  componentWillUpdate() {}
 
-  componentDidUpdate(prevProps, prevState) {}
+  componentDidUpdate() {}
 
   componentWillUnmount() {}
 
@@ -201,7 +203,7 @@ class MainFloorDoors extends React.PureComponent {
           />
           <line
             id="SouthBedroomDoor"
-            //className={this.props.classes.SouthBedroomDoorClosed}
+            className={this.props.classes.SouthBedroomDoorClosed}
             x1="458.17"
             y1="303.06"
             x2="459.74"
@@ -209,7 +211,7 @@ class MainFloorDoors extends React.PureComponent {
           />
           <line
             id="NorthBedroomDoor"
-            //className={this.props.classes.NorthBedroomDoorClosed}
+            className={this.props.classes.NorthBedroomDoorClosed}
             x1="417.5"
             y1="308.17"
             x2="417.83"
@@ -257,7 +259,7 @@ class MainFloorDoors extends React.PureComponent {
           />
           <line
             id="GarageDoor"
-            className={this.props.classes.GarageDoorOpen}
+            className={this.props.classes.GarageDoorClosed}
             x1="163.17"
             y1="487.83"
             x2="18.83"

@@ -5,6 +5,9 @@ import Stepper, { Step, StepButton } from 'material-ui/Stepper';
 import { withStyles } from 'material-ui/styles';
 import MainFloor from '../components/MainFloor';
 import Clock from '../components/Clock';
+import Weather from '../components/Weather';
+import Yard from '../components/Yard/Yard';
+import Basement from '../components/Basement/Basement';
 
 // import {connect} from 'react-redux';
 // import {bindActionCreators} from 'redux';
@@ -114,6 +117,8 @@ class FloorPlan extends React.Component {
         <div className={this.props.classes.navbar}>
           <Clock />
           <Divider />
+          <Weather />
+          <Divider />
           <Typography
             element="h2"
             variant="headline"
@@ -146,6 +151,8 @@ class FloorPlan extends React.Component {
         </div>
         <div className="floorplan">
           {this.state.floorIndex === 1 && <MainFloor />}
+          {this.state.floorIndex === 0 && <Yard />}
+          {this.state.floorIndex === 2 && <Basement />}
         </div>
       </div>
     );

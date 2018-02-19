@@ -45,11 +45,11 @@ class MainFloorFans extends React.PureComponent {
 
   componentDidMount() {}
 
-  componentWillReceiveProps(nextProps) {}
+  componentWillReceiveProps() {}
 
-  componentWillUpdate(nextProps) {}
+  componentWillUpdate() {}
 
-  componentDidUpdate(prevProps) {}
+  componentDidUpdate() {}
 
   componentWillUnmount() {}
 
@@ -70,7 +70,7 @@ class MainFloorFans extends React.PureComponent {
         <g
           id="GreatRoomFan"
           data-name="Layer 5"
-          className={this.props.classes.on}
+          className={this.props.classes.off}
         >
           <circle
             className={this.props.classes.fan}

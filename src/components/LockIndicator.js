@@ -19,11 +19,11 @@ class LockIndicator extends React.PureComponent {
 
   componentDidMount() {}
 
-  componentWillReceiveProps(nextProps) {}
+  componentWillReceiveProps() {}
 
-  componentWillUpdate(nextProps, nextState) {}
+  componentWillUpdate() {}
 
-  componentDidUpdate(prevProps, prevState) {}
+  componentDidUpdate() {}
 
   componentWillUnmount() {}
 
